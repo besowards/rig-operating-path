@@ -1,6 +1,6 @@
-# Repo Operating Path
+# Rig Operating Path
 
-Repo Operating Path is an Agent Skill for making repository workflows work cleanly from their intended first action.
+Rig Operating Path is an Agent Skill for making repository workflows work cleanly from their intended first action.
 
 It helps Claude and Codex users:
 
@@ -16,7 +16,7 @@ The method is useful when a workflow eventually succeeds only after retries, fal
 ## What is included
 
 ```text
-skills/repo-operating-path/
+skills/rig-operating-path/
 ├── SKILL.md
 └── references/
     ├── operating-path-method.md
@@ -33,8 +33,8 @@ The skill has no scripts, external calls, or machine-specific configuration.
 Clone the repository:
 
 ```sh
-git clone https://github.com/besowards/repo-operating-path.git
-REPO_OPERATING_PATH="$(pwd)/repo-operating-path"
+git clone https://github.com/besowards/rig-operating-path.git
+RIG_OPERATING_PATH="$(pwd)/rig-operating-path"
 ```
 
 For Claude Code, copy the skill into the project skill directory:
@@ -42,14 +42,14 @@ For Claude Code, copy the skill into the project skill directory:
 ```sh
 TARGET_PROJECT="/path/to/your/project"
 mkdir -p "$TARGET_PROJECT/.claude/skills"
-cp -R "$REPO_OPERATING_PATH/skills/repo-operating-path" "$TARGET_PROJECT/.claude/skills/"
+cp -R "$RIG_OPERATING_PATH/skills/rig-operating-path" "$TARGET_PROJECT/.claude/skills/"
 ```
 
 Or install it for the current Claude Code user:
 
 ```sh
 mkdir -p "$HOME/.claude/skills"
-cp -R "$REPO_OPERATING_PATH/skills/repo-operating-path" "$HOME/.claude/skills/"
+cp -R "$RIG_OPERATING_PATH/skills/rig-operating-path" "$HOME/.claude/skills/"
 ```
 
 For Codex, install it at project scope:
@@ -57,14 +57,14 @@ For Codex, install it at project scope:
 ```sh
 TARGET_PROJECT="/path/to/your/project"
 mkdir -p "$TARGET_PROJECT/.agents/skills"
-cp -R "$REPO_OPERATING_PATH/skills/repo-operating-path" "$TARGET_PROJECT/.agents/skills/"
+cp -R "$RIG_OPERATING_PATH/skills/rig-operating-path" "$TARGET_PROJECT/.agents/skills/"
 ```
 
 Or install it for the current Codex user:
 
 ```sh
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R "$REPO_OPERATING_PATH/skills/repo-operating-path" "${CODEX_HOME:-$HOME/.codex}/skills/"
+cp -R "$RIG_OPERATING_PATH/skills/rig-operating-path" "${CODEX_HOME:-$HOME/.codex}/skills/"
 ```
 
 Restart or open a fresh agent session if the runtime does not discover newly installed skills immediately.
@@ -72,7 +72,7 @@ Restart or open a fresh agent session if the runtime does not discover newly ins
 Verify the copied skill and trigger behavior:
 
 ```sh
-test -f "$TARGET_PROJECT/.agents/skills/repo-operating-path/SKILL.md"
+test -f "$TARGET_PROJECT/.agents/skills/rig-operating-path/SKILL.md"
 ```
 
 In a fresh session, ask “Map the operating path for our release command before we add retries.” The response should define the path before proposing changes. A near-miss such as “Diagnose why the lint job fails on Node 22” should remain ordinary debugging unless route ownership, side effects, or end-to-end proof are also at issue.

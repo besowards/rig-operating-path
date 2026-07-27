@@ -1,9 +1,9 @@
 ---
-name: repo-operating-path
+name: rig-operating-path
 description: Use when asked to map, simplify, repair, or prove an end-to-end repository operating path; when a workflow succeeds only after retries, fallbacks, restarts, manual fixes, duplicate actions, wrong-owner detours, or lower-level shortcuts; or when deciding whether reliability machinery preserves proven behavior or hides a broken route. Do not use for an isolated code, test, lint, CI, or refactoring problem with no operating-route, ownership, authority, side-effect, or end-to-end proof question.
 ---
 
-# Repo Operating Path
+# Rig Operating Path
 
 Help the user make one repository workflow complete its exact goal through the intended route, cleanly from the correct first action.
 

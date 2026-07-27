@@ -1,4 +1,4 @@
-# Repo Operating Path Contributor Contract
+# Rig Operating Path Contributor Contract
 
 This repository publishes a provider-neutral Agent Skill for defining, diagnosing, repairing, and proving repository operating paths.
 
